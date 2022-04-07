@@ -4,6 +4,7 @@
  * main - Entry point
  *
  * Return : Always 0 (success)
+ * Return value of main 0 if successful
  */
 int main(void)
 {
