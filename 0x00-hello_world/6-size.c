@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Prints out the sizes of various data types
+ * main - Entry point
  *
- * Return :always 0 (success)
+ * Return : Always 0 (success)
  */
 int main(void)
 {
@@ -20,4 +20,3 @@ int main(void)
 	printf("Size of a float: %lu bytes(s)\n", (unsigned long)sizeof(f));
 	return (0);
 }
-
