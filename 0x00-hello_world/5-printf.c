@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *Description: main - Prints out a string 
+ *Description: main - Prints out a string
  * Return :Always 0 (Success)
  */
 
