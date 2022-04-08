@@ -6,7 +6,7 @@
 *if its greater than 5,less than 6 or 0
 *Return :0 (success)
 */
-int main(void),
+int main(void)
 {
 
 	int n;
