@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
-*main:Prints last digit of a random numberand checks
-*if its greater than 5,less than 6 or 0
-*Return :0 (success)
+*main -entry point
+*
+*Return :Function ends 0 (success)
 */
 int main(void)
 {
