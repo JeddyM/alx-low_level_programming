@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main -Entry point prints 3 digit numbers
  * ascending order
