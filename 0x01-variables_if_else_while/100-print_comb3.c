@@ -20,7 +20,7 @@ int main(void)
 		num1 = 48;
 		while (num1 < 58)
 		{
-			if (num2 != num2 && num2 < num1)
+			if (num2 != num1 && num2 < num1)
 
 			{
 			putchar(num2);
@@ -33,10 +33,10 @@ int main(void)
 			putchar(' ');
 			
 			}
-			num1++
+			num1++;
 
 		}
-		num2++
+		num2++;
 	}
 
 	putchar('\n');
