@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
- * main - Entry point prints 3 digit numbers
- * ascending order
- * Return : always 0 (success)
+ * main - Entry point printing three digits in ascending order
+ *
+ * Return: always 0 (success)
  */
+ 
 
 int main(void)
 {
