@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - print all natural 
+ * print_to_98 - print all natural
  * @n: the first number passed to the function
  *
  * Return: always 0 (success)
