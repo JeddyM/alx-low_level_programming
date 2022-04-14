@@ -4,7 +4,7 @@
  *
  * Return: always 0 (success)
  */
-void print_line(int n);
+void print_line(int n)
 {
 	int i;
 
