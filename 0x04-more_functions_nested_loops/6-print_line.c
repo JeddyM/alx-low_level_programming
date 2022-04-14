@@ -1,9 +1,10 @@
 #include "main.h"
 /**
  * print_line - prints a line
- *
+ * @n: number of times for printing the line
  * Return: always 0 (success)
  */
+
 void print_line(int n)
 {
 	int i;
