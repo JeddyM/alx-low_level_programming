@@ -25,13 +25,13 @@ void print_triangle(int size)
 			for (b = i; b < size; b++)
 			{
 
-			_putchar(' ');
+				_putchar(' ');
 			}
 
 			for (b = 1; b <= a; b++)
 			{
 
-			_putchar('#');
+				_putchar('#');
 			}
 
 			_putchar('\n');
