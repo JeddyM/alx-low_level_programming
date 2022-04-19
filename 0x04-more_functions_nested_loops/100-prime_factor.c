@@ -7,7 +7,7 @@
  */
 
 int main(void)
-{	
+{
 	unsigned long i, num, max;
 
 	num = 612852475143;
