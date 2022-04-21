@@ -12,7 +12,7 @@ char a, b;
 for (length = 0; s[length] != '\0'; length++)
 {
 }
-	j = lenght - 1;
+	j = length - 1;
 	i = 0;
 
 	while( j > i)
