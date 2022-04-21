@@ -8,12 +8,13 @@
 
 void puts2(char *str)
 {
-	int i = 0;
-	int j = 0;
+	int i, j;
+	i = 0;
+	j = 0;
 
 	while (str[j++])
 	{
-	i++;
+		i++;
 	}
 
 	for (j = 0; j < i; i += 2)
