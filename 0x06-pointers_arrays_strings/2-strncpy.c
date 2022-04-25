@@ -15,7 +15,7 @@ char *_strncpy(char *dest, char *src, int n)
 	while (n > j)
 	{
 		if (src[j] == '\0')
-			for (k < n; k++)
+			for (j < n; j++)
 			{
 			dest[i] = '\0';
 			i++;
