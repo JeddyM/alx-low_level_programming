@@ -13,6 +13,4 @@ char *_strchr(char *s, char c)
 		if (s[i] == c)
 			break;
 	return (s[i] == c ? (s + i) : '\0');
-	/* if s[i] equals c (s + i) otherwiswe NULL*/
-
 }
