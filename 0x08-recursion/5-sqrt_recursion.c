@@ -8,12 +8,9 @@
 
 int result(int a, i)
 {
-	int square;
-
-	square = i *i;
-	if (square == a)
+	if (i *i == a)
 		return (i);
-	else if (square < a)
+	else if (i *i < a)
 		return (result(a, i + 1));
 	return (-1);
 }
