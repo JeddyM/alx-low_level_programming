@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * _puts_recursion -  prints a string, followed by a new line.
- * @s: string
+ * is_prime_number - checks if prime number
+ * @n: number
+ * Return: 1 if prime number,otherwise return 0
  */
-void _puts_recursion(char *s)
+int is_prime_number(int n);
 {
 	if (*s == '\0')
 		_putchar('\n');
