@@ -6,7 +6,7 @@
  * Return: square root else -1 if none
  */
 
-int result(int a, i)
+int result(int a, int i)
 {
 	if (i *i == a)
 		return (i);
