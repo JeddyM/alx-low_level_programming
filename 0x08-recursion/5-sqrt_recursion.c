@@ -8,9 +8,9 @@
 
 int result(int a, int i)
 {
-	if (i *i == a)
+	if (i * i == a)
 		return (i);
-	else if (i *i < a)
+	else if (i * i < a)
 		return (result(a, i + 1));
 	return (-1);
 }
