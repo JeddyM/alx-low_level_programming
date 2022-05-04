@@ -11,8 +11,10 @@ int is_prime_number(int n)
 		return (0);
 	return (primefind(n, 2));
 }
+
+
 /**
- * prime_find - function to find prime number
+ * primefind - function to find prime number
  * @a: same as number to evaluate
  * @i: number to iterate from 1 to n
  * Return: 1 success
