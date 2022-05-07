@@ -9,8 +9,9 @@
  */
 char *_strdup(char *str)
 {
-	int i, len = 0;
 	char *str2;
+	int i, len = 0;
+	
 
 	if (str == NULL)
 		return (NULL);
@@ -25,7 +26,9 @@ char *_strdup(char *str)
 		return (NULL);
 
 	for (i = 0; str[i]; i++)
-		str[i] = str2[i];
+	str[i] = str2[i];
+
 	str2[len] = '\0';
+
 	return (str2);
 }
