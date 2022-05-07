@@ -10,17 +10,18 @@
 char *_strdup(char *str)
 {
 	char *str2;
-	int i, len = 0;
+	int i;
 
 
 	if (str == NULL)
 		return (NULL);
 
-	/* find length*/
-	for (i = 0; str[i]; i++)
-	len++;
 
-	str2 = malloc(sizeof(char) * (len + 1));/*index starts at 0*/
+	for (i = 0; str[i]; i++)
+	;
+	i++;
+
+	str2 = malloc(sizeof(char) * i);
 
 	if (str2 == NULL)
 		return (NULL);
