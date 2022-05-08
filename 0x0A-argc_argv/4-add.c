@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		sum = sum + atoi(argv[i])
 	}
 
-	if (arg <= 1)
+	if (argc <= 1)
 	{
 		printf("0\n");
 
