@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 			}
 
 		}
-		sum = sum + atoi(argv[i])
+		sum = sum + atoi(argv[i]);
 	}
 
 	if (argc <= 1)
