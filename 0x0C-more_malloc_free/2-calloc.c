@@ -12,7 +12,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	/* void means not associated with any data type*/
 	void *calc;
 	char *p;
-	int i;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
