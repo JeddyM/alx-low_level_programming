@@ -19,9 +19,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	calc = malloc(size * nmemb);
 
-	if (calc = NULL)
+	if (calc == NULL)
 		return (NULL);
-	
+
 	/*when element is character*/
 	p = calc;
 
@@ -30,5 +30,3 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	return (calloc);
 }
-
- 

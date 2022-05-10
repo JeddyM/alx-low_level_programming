@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * malloc_checked - allocates memory using malloc.
+ * string_nconcat - concatenates two strings.
  * @s1: first string
  * @s2: second string to add in S1
  * @n:number of bytes to concatenate to S1
@@ -29,11 +29,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		conc[len++] = s1[i];
 
 	for (i = 0; s2[i] && i < n; i++)
-		 conc[len++] = s2[i];
+		conc[len++] = s2[i];
+
 	conc[len] = '\0';
 
 
 	return (conc);
 }
-
- 
