@@ -1,1 +1,0 @@
-First programming in C
