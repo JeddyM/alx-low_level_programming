@@ -1,12 +1,15 @@
+#ifndef STRUCTS
+#define STRUCTS
 /**
- * struct dog -
+ * struct dog - description dog
  * @name: first element
  * @age: second element
  * @owner: third element
  */
-struct dog
+typedef struct dog
 {
 char *name;
 float *age;
 char *owner;
 };
+#endif
