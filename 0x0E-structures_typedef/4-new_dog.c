@@ -77,22 +77,3 @@ char *_strdup(char *str)
 	return (str_copy);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
