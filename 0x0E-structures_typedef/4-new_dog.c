@@ -18,12 +18,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (name == NULL || owner  == NULL)
 		return (NULL);
-	p = malloc(sizeof(dog_t))
+	p = malloc(sizeof(dog_t));
 	if (p != NULL)
 
 	{
 
-		(*p).name = _strdup(name);
+		p->name = _strdup(name);
 		if (p->name == NULL)
 		{
 			free(p->name);
@@ -45,7 +45,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	return (NULL);
 }
-
 /**
  * _strdup - function that returns a pointer to a newly allocated space in
  * memory which contains a copy of the string given a parameter
