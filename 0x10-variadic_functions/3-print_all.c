@@ -6,13 +6,13 @@
 
 
 /**
- * print_strings - function that prints strings
+ * print_all - function that prints anything
  * @separator: string to be printed between numbers
  * @n: number of integers to be passed to function
  *
  * Return: Always 0 success
  */
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
 	/*declaring pointer to argument list*/
 	va_list ap;
