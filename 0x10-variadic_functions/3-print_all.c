@@ -21,8 +21,6 @@ void print_all(const char * const format, ...)
 	/*initializing argument to the list pointer*/
 	va_start(args, format);
 
-	while (format[n])
-		n++;
 	if (format)
 		while (format[i])
 		{
