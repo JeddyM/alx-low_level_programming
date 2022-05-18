@@ -24,7 +24,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-
+		/* Getting the data  and indicating type using va_arg */
 		printf("%d", va_arg(ap, int));
 
 		if (separator != NULL && i != n - 1)
