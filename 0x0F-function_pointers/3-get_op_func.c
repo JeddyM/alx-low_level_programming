@@ -24,15 +24,15 @@ int (*get_op_func(char *s))(int, int)
 
 	int i = 0;
 
-	when (i < 5)
+	if (i < 5)
 	{
-	
-	
+
+		while (*s == *ops[i].op)
+			return (*(ops[i]).f);
+		i++;
 	
 	}
-
-
-
+	return (NULL);
 
 }
 
