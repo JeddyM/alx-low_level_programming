@@ -43,6 +43,9 @@ void print_all(const char * const format, ...)
 						printf("(nil)");
 					printf("%s%s", space, str);
 					break;
+				default:
+					i++;
+					continue;
 			}
 			space = ", ";
 			i++;
