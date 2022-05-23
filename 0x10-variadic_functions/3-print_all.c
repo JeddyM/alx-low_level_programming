@@ -14,7 +14,7 @@
 void print_all(const char * const format, ...)
 {
 	char *str;
-	char *space;
+	char *space = "";
 	int i = 0, n = 0;
 	/*declaring pointer to argument list*/
 	va_list args;
@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 					str = va_arg(args, char *);
 					if (str == NULL)
 						printf("(nil)");
-					printf("%s", space, str);
+					printf("%s%s", space, str);
 					break;
 			}
 			space = ", ";
