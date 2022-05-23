@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 {
 	char *str;
 	char *space = "";
-	int i = 0, n = 0;
+	int i = 0;
 	/*declaring pointer to argument list*/
 	va_list args;
 
@@ -29,13 +29,13 @@ void print_all(const char * const format, ...)
 			{
 
 				case 'c':
-					printf("%c", space, va_arg(args, int));
+					printf("%s%c", space, va_arg(args, int));
 					break;
 				case 'i':
-					printf("%i", space, va_arg(args, int));
+					printf("%s%i", space, va_arg(args, int));
 					break;
 				case 'f':
-					printf("%f", space, va_arg(args, double));
+					printf("%s%f", space, va_arg(args, double));
 					break;
 				case 's':
 					str = va_arg(args, char *);
