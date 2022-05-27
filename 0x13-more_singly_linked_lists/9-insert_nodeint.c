@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * *insert_nodeint_at_index - nserts a new node at a given position.
+ * insert_nodeint_at_index - nserts a new node at a given position.
  * @head: pointer to head of list-t list(address og head)
  * @n: integer to be added
  * @idx: index of list where the new node should be added. Index starts at 0
