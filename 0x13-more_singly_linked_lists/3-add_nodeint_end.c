@@ -29,16 +29,13 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		/*nothing on list no current_node*/
 	}
 
-	else
-	{
-		current_node = *head;
-		while (current_node->next != NULL)
-			current_node->next = current_node;
+	current_node = *head;
+	while (current_node->next != NULL)
+		current_node->next = current_node;
 
-		current_node->next = new_node;
-	}
+	current_node->next = new_node;
 
-	return (*head);
+	return (new_node);
 
 
 }
