@@ -40,7 +40,7 @@ unsigned int binary_to_uint(const char *b)
 
 int _strlen(const char *s)
 {
-	int i ;
+	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 		continue;
