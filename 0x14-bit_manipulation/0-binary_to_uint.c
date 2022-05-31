@@ -9,20 +9,24 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i, len = 0;
+	int i = 0, len = 0;
 	unsigned int sum = 0, temp = 0;
 
 	if (b == NULL)
 		return (0);
+
 	len = _strlen(b);
 
 
-	for (i = 0; b[i]; i++)
+	while (b[i] != '\0')
 	{
-		if (b[i] != '0' || b[i] != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		temp = (b[i] - '0') * _pow_recursion(2, (len - 1) - i);
+
+		temp = (b[i] - 48) * _pow_recursion(2, (len - 1) - i);
 		sum += temp;
+		i++;
+
 	}
 	return (sum);
 
@@ -36,12 +40,11 @@ unsigned int binary_to_uint(const char *b)
 
 int _strlen(const char *s)
 {
-	int i;
+	int i ;
 
 	for (i = 0; s[i] != '\0'; i++)
-	{
 		continue;
-	}
+
 	return (i);
 }
 
