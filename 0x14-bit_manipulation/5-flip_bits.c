@@ -6,7 +6,6 @@
  * get from one number to another
  * @m: number to flip n to
  * @n: number
- * @index: index starting from 0 of the bit you want to set
  * Return: 1 if it worked, or -1 if an error occurred
  */
 
