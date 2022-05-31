@@ -10,7 +10,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i, len = 0;
-	unsigned int len, sum = 0, temp = 0;
+	unsigned int sum = 0, temp = 0;
 
 	if (b == NULL)
 		return (0);
@@ -33,13 +33,14 @@ unsigned int binary_to_uint(const char *b)
  * @s: string to find length
  * Return: length of a string
  */
-int _strlen(char *s)
+
+int _strlen(const char *s)
 {
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-	continue;
+		continue;
 	}
 	return (i);
 }
