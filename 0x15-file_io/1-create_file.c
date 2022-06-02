@@ -21,7 +21,7 @@
 /*if file exist truncate it and do not change the permissions*/
 int create_file(const char *filename, char *text_content)
 {
-	int fd, wr, len;
+	int fd, len, wr;
 
 	/* opening and creating*/
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
@@ -36,7 +36,13 @@ int create_file(const char *filename, char *text_content)
 			;
 	}
 	/*writing*/
+
 	wr = write(fd, text_content, len);
+	
+	if (wr == -1)
+		return (-1);
+
 	close(fd);
+
 	return (1);
 }
