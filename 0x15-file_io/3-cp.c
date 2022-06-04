@@ -9,35 +9,58 @@
 
 
 
+#define SDE STDERR_FILENO
+
 /**
- * append_text_to_file - function that appends text at the end of a file.
- * @filename: pointer to name of the file
- * @text_content: NULL terminated string to write to the file
- * Return: 1 on success, -1 on failure.
+ * main - copies the content of a file to another file.
+ * @ac: count of arguments entered
+ * @av: arguments entered
+ *
+ * conditions: if the number of argument is not the correct one, exit with
+ * code 97 and print Usage: cp file_from file_to  on POSIX standard error
+ * if file_to already exists, truncate it
+ * if file_from does not exist, or if you can not read it, exit with code
+ * 98 and print Error: Can't read from file NAME_OF_THE_FILE, followed by
+ * a new line, on the POSIX standard error
+ * Permissions of the created file: rw-rw-r--
+ * if you can't write print file_to exit with 99 and print as indicated
+ * must read 1,024 bytes at a time from the file_from
+ *
+ * Return: 0
  */
 
 int main(int ac, char *av[])
 {
-	int fd, wr, len;
+	int fd_source, fd_dest, wr, rd;
+	char buf[1204];
 
-	/* opening*/
-	fd = open(filename, O_APPEND | O_WRONLY);
-	if (fd == -1 || filename == NULL)
-		return (-1);
-
-	if (text_content != NULL)
+	if (ac != 3)
+		dprintf(SDE, "Usage: cp file_from file_to\n"), exit(97);
+	fd_source = open(av[1], O_RDONLY);
+	if (fd_source == -1)
+		dprintf(SDE, "Error: Can't read from file %s\n", av[1]), exit(98);
+	fd_dest = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fd_dest == -1)
+		dprintf(SDE, "Error: Can't write to %s\n", av[2]), exit(99);
+	while (rd > 0)
 	{
-
-		for (len = 0; text_content[len] != '\0'; len++)
-			;
+		rd = read(fd_source, buf, 1204);
+		if (rd == -1)
+		{
+			dprintf(SDE, "Error: Can't read from file %s\n", av[1]), exit(98);
+		}
+		if (rd > 0)
+		{
+			wr = write(fd_dest, buf, (ssize_t) rd);
+			if (wr == -1)
+				dprintf(SDE, "Error: Can't write to %s\n", av[2]), exit(99);
+		}
 	}
-
-	/*writing*/
-	wr = write(fd, text_content, len);
-
+	rd = close(fd_source);
+	if (rd == -1)
+		dprintf(SDE, "Error: Can't close fd %d\n", fd_source), exit(100);
+	wr = close(fd_dest);
 	if (wr == -1)
-		return (-1);
-
-	close(fd);
-	return (1);
+		dprintf(SDE, "Error: Can't close fd %d\n", fd_dest), exit(100);
+	return (0);
 }
