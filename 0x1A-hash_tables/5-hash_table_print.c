@@ -9,7 +9,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *node;
 	unsigned long int index = 0;
-       	char del = 0;
+	char del = 0;
 
 	if (ht == NULL)
 		return;
@@ -33,6 +33,6 @@ void hash_table_print(const hash_table_t *ht)
 		}
 		index++;
 	}
-	
+
 	printf("}\n");
 }
